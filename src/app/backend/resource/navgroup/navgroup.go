@@ -10,13 +10,15 @@ type NavGroup struct {
 }
 
 type NavInfo struct {
-	Title string `json:"title"`
-	Url   string `json:"url"`
+	Title          string `json:"title"`
+	Url            string `json:"url"`
+	ServiceAccount string `json:"serviceaccount"`
 }
 
 // 获取导航菜单
 func GetNavGroup() (NavGroup, error) {
 	navgroup := os.Getenv("KUBE_DASHBOARD_NAV_GROUP")
+
 	var navGroup NavGroup
 	if navgroup != "" {
 		data := `{

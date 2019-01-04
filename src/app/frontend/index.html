@@ -20,13 +20,9 @@ limitations under the License.
 
 <head>
   <meta charset="utf-8">
-  <title ng-controller="kdTitle as $ctrl"
-         ng-bind="$ctrl.title()"></title>
-  <link rel="icon"
-        type="image/png"
-        href="assets/images/kubernetes-logo.png" />
-  <meta name="viewport"
-        content="width=device-width">
+  <title ng-controller="kdTitle as $ctrl" ng-bind="$ctrl.title()"></title>
+  <link rel="icon" type="image/jpg" href="assets/images/elcould-log.jpg" />
+  <meta name="viewport" content="width=device-width">
 
   <!-- build:css static/vendor.css -->
   <!-- bower:css -->
@@ -50,13 +46,9 @@ limitations under the License.
       experience.</p>
     <![endif]-->
 
-  <kd-login layout="column"
-            layout-fill
-            ng-if="$ctrl.isLoginState()">
+  <kd-login layout="column" layout-fill ng-if="$ctrl.isLoginState()">
   </kd-login>
-  <kd-chrome layout="column"
-             layout-fill
-             ng-if="!$ctrl.isLoginState()">
+  <kd-chrome layout="column" layout-fill ng-if="!$ctrl.isLoginState()">
     <!-- Application content is inserted here. -->
   </kd-chrome>
 

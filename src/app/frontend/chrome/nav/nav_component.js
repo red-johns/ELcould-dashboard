@@ -118,32 +118,31 @@ export class NavController {
      * 获取导航菜单
      * @export
      */
-    getNavGroup() {
+    async getNavGroup() {
         // 获取导航菜单与秘钥
-        Promise.all([
-            this.resource_('api/v1/navGroup').get().$promise,
-            this.resource_('api/v1/secret/default').get().$promise,
-        ]).then((res)=>{
-            const navs = res[0].navs;
-            const secrets = res[1].secrets;
+        const result_navs = await this.resource_('api/v1/navGroup').get().$promise;
+        const result_secret = await this.resource_('api/v1/secret/default').get().$promise;
 
-            // 根据菜单名称与秘钥前缀获取token
-            if (navs.length > 0 && secrets.length > 0) {
-                for (let i = 0; i < navs.length; i++) {
-                    const title = navs[i].title.toLowerCase();
-                    for (let j = 0; j < secrets.length; j++) {
-                        if (secrets[j].objectMeta.name.includes(title)) {
-                            // 通过 token 名称 获取秘钥 token 值
-                            this.resource_(`api/v1/secret/default/${secrets[j].objectMeta.name}`).get().$promise.then((result)=>{
-                                navs[i].url += `?token=${this.decode(result.data.token)}`;
-                                this.navGroup = navs;
-                            });
-                        }
+        /** @type {Array<!backendApi.NavInfo>} */
+        const navs = result_navs.navs;
+        const secrets = result_secret.secrets;
+
+        // 根据菜单用户名称与秘钥前缀获取token
+        if (navs.length > 0 && secrets.length > 0) {
+            for (let i = 0; i < navs.length; i++) {
+                const serviceaccount = navs[i].serviceaccount;
+                for (let j = 0; j < secrets.length; j++) {
+                    // 判断前缀
+                    if (serviceaccount !== '' && secrets[j].objectMeta.name.indexOf(serviceaccount) === 0) {
+                        const result = await this.resource_(`api/v1/secret/default/${secrets[j].objectMeta.name}`).get().$promise;
+                        navs[i].url += `?token=${this.decode(result.data.token)}`;
                     }
                 }
             }
-        });
+        }
+        this.navGroup = navs;
     }
+
     // base64 解码
     decode(code) {
         const _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";

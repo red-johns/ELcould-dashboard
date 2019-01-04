@@ -1601,3 +1601,12 @@ backendApi.CanIResponse;
  * }}
  */
 backendApi.NavGroup;
+
+/**
+ * @typedef {{
+ *  title: string,
+ *  url: string,
+ *  serviceaccount: string
+ * }}
+ */
+backendApi.NavInfo;

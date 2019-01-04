@@ -72,7 +72,6 @@
   <translation id="1040732924028857594" key="MSG_CHROME_NAV_NAV_20" desc="Secrets menu entry.">シークレット</translation>
   <translation id="8368599117962865229" key="MSG_CHROME_NAV_NAV_21" desc="About page menu entry.">バージョン情報</translation>
   <translation id="7160486052155717528" key="MSG_CHROME_NAV_NAV_22" desc="Cron Jobs menu entry.">Cron Jobs</translation>
-  <translation id="5937278785382848812" key="MSG_CHROME_NAV_NAV_23" desc="Settings page menu entry.">Settings</translation>
   <translation id="4957526140740745953" key="MSG_CHROME_NAV_NAV_3" desc="Persistent Volumes menu item in the nav.">永続ボリューム</translation>
   <translation id="5886605472855359914" key="MSG_CHROME_NAV_NAV_4" desc="Config and Storage group menu entry.">コンフィグとストレージ</translation>
   <translation id="874273813471860738" key="MSG_CHROME_NAV_NAV_5" desc="Storage Classes menu entry.">ストレージクラス</translation>
@@ -526,9 +525,9 @@
   <translation id="2222883722971802152" key="MSG_LOGIN_BASIC_1" desc="\'Password\' field label shown on login page for basic auth">Password</translation>
   <translation id="5760322479083675615" key="MSG_LOGIN_KUBECONFIG_0" desc="A \'Choose kubeconfig file\' placeholder for an empty file input field on login page.">Choose kubeconfig file</translation>
   <translation id="5811202003147148582" key="MSG_LOGIN_LOGIN_0" desc="Title shown on login page on login card">ELcould Dashboard</translation>
-  <translation id="668620583044492000" key="MSG_LOGIN_LOGIN_1" desc="\'Username\' field label shown on login page for basic auth">Username</translation>
-  <translation id="4939146912229747168" key="MSG_LOGIN_LOGIN_2" desc="\'Password\' field label shown on login page for basic auth">Password</translation>
-  <translation id="5728098885822861128" key="MSG_LOGIN_LOGIN_4" desc="Text shown on the sign in button on login page">Sign in</translation>
+  <translation id="5493121206118977296" key="MSG_LOGIN_LOGIN_1" desc="\'Username\' field label shown on login page for basic auth">用户名</translation>
+  <translation id="6796189561665665250" key="MSG_LOGIN_LOGIN_2" desc="\'Password\' field label shown on login page for basic auth">密码</translation>
+  <translation id="1501267969725789473" key="MSG_LOGIN_LOGIN_3" desc="Text shown on the sign in button on login page">登 录</translation>
   <translation id="7931742467615349833" key="MSG_LOGIN_TOKEN_0" desc="\'Token\' field label shown on login page for token auth">Enter token</translation>
   <translation id="1813585001229142426" key="MSG_LOGIN_UNAUTHORIZED_ERROR" desc="Text shown when unauthorized user tries to log in.">Authentication failed. Please try again.</translation>
   <translation id="6905890758241326832" key="MSG_LOGS_DOWNLOAD_DIALOG_0" desc="Log file download dialog title.">Downloading log file</translation>

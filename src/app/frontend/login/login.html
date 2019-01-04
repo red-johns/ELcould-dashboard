@@ -22,17 +22,17 @@ limitations under the License.
     </kd-title>
     <kd-content>
         <md-input-container class="md-block">
-            <label>[[Username|'Username' field label shown on login page for basic auth]]</label>
+            <label>[[用户名|'Username' field label shown on login page for basic auth]]</label>
             <input required md-no-asterisk>
         </md-input-container>
 
         <md-input-container class="md-block">
-            <label>[[Password|'Password' field label shown on login page for basic auth]]</label>
+            <label>[[密码|'Password' field label shown on login page for basic auth]]</label>
             <input type="password" required md-no-asterisk>
         </md-input-container>
 
         <md-button class="md-raised md-primary" style="width:100%" type="button" ng-click="$ctrl.skip()">
-            [[Sign in|Text shown on the sign in button on login page]]
+            [[登 录|Text shown on the sign in button on login page]]
         </md-button>
     </kd-content>
 </kd-content-card>
@@ -50,14 +50,14 @@ limitations under the License.
         <kd-token-login ng-if="$ctrl.isAuthenticationModeEnabled($ctrl.supportedAuthenticationModes.TOKEN)"
                         title="[[Token|Token option label shown on login page]]"
                         desc="[[Every Service Account has a Secret with valid Bearer Token that can be used to log in to Dashboard. To find out more about how to configure and use Bearer Tokens, please refer to the <a href='https://kubernetes.io/docs/admin/authentication/'>Authentication</a> section.|]]"
-      
+
                         on-update="$ctrl.onUpdate(loginSpec)"></kd-token-login>
         <kd-basic-login ng-if="$ctrl.isAuthenticationModeEnabled($ctrl.supportedAuthenticationModes.BASIC)"
                         title="[[Basic|Basic option label shown on login page]]"
                         on-update="$ctrl.onUpdate(loginSpec)"></kd-basic-login>
         <kd-kube-config-login title="[[Kubeconfig|Kubeconfig option label shown on login page]]"
                               desc="[[Please select the kubeconfig file that you have created to configure access to the cluster. To find out more about how to configure and use kubeconfig file, please refer to the <a href='https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/'>Configure Access to Multiple Clusters</a> section.|]]"
-      
+
                               on-update="$ctrl.onUpdate(loginSpec)"></kd-kube-config-login>
       </kd-login-options>
 
