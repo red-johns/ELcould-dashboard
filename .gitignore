@@ -12,6 +12,7 @@ coverage/
 ## System specific files
 # macOS
 .DS_Store
+.svn
 
 ## IDE specific files
 # IntelliJ
@@ -19,3 +20,4 @@ coverage/
 *.iml
 # Vi
 *.swp
+.vscode

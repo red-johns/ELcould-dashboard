@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {stateName as overviewState} from '../overview/state';
+import { stateName as overviewState } from '../overview/state';
 import LoginSpec from './spec';
 
 /**
@@ -40,8 +40,8 @@ class LoginController {
    * @ngInject
    */
   constructor(
-      kdNavService, kdAuthService, $state, kdAuthenticationModesResource, kdErrorService,
-      kdSkipButtonEnabled) {
+    kdNavService, kdAuthService, $state, kdAuthenticationModesResource, kdErrorService,
+    kdSkipButtonEnabled) {
     /** @private {!./../chrome/nav/nav_service.NavService} */
     this.kdNavService_ = kdNavService;
     /** @private {!./../common/auth/service.AuthService} */
@@ -151,18 +151,18 @@ class LoginController {
   login() {
     if (this.form.$valid) {
       this.kdAuthService_.login(this.loginSpec)
-          .then((errors) => {
-            if (errors.length > 0) {
-              this.errors = errors;
-              return;
-            }
+        .then((errors) => {
+          if (errors.length > 0) {
+            this.errors = errors;
+            return;
+          }
 
-            this.kdNavService_.setVisibility(true);
-            this.state_.transitionTo(overviewState);
-          })
-          .catch((err) => {
-            this.errors = [this.errorService_.toBackendApiError(err)];
-          });
+          this.kdNavService_.setVisibility(true);
+          this.state_.transitionTo(overviewState);
+        })
+        .catch((err) => {
+          this.errors = [this.errorService_.toBackendApiError(err)];
+        });
     }
   }
 

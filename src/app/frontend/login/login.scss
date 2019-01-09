@@ -19,25 +19,29 @@ kd-login {
   flex: 0 1 auto;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 12 * $baseline-grid;
+  // padding-bottom: 12 * $baseline-grid;
+  background: #222 url('../../assets/images/bg-gride.png');;
 }
 
 .kd-login-card {
   margin: auto;
-  width: 50%;
+  width: 30%;
+  height: 80%;
+  padding: 10px 5px;
+  background: #fff;
 
-  h1 {
-    background-color: $primary;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    color: $content-background;
-    margin: -1px;
-  }
+  // h1 {
+  //   background-color: $primary;
+  //   border-top-left-radius: 2px;
+  //   border-top-right-radius: 2px;
+  //   color: $content-background;
+  //   margin: -1px;
+  // }
 
-  kd-content {
-    display: block;
-    padding: 3 * $baseline-grid;
-  }
+  // kd-content {
+  //   display: block;
+  //   padding: 3 * $baseline-grid;
+  // }
 }
 
 .kd-login-card-content {

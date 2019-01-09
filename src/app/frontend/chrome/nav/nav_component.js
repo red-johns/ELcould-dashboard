@@ -128,7 +128,7 @@ export class NavController {
         const secrets = result_secret.secrets;
 
         // 根据菜单用户名称与秘钥前缀获取token
-        if (navs.length > 0 && secrets.length > 0) {
+        if ((navs && navs.length > 0) && (secrets && secrets.length > 0)) {
             for (let i = 0; i < navs.length; i++) {
                 const serviceaccount = navs[i].serviceaccount;
                 for (let j = 0; j < secrets.length; j++) {

@@ -23,7 +23,6 @@ limitations under the License.
   <title ng-controller="kdTitle as $ctrl" ng-bind="$ctrl.title()"></title>
   <link rel="icon" type="image/jpg" href="assets/images/elcould-log.jpg" />
   <meta name="viewport" content="width=device-width">
-
   <!-- build:css static/vendor.css -->
   <!-- bower:css -->
   <!-- Application CSS dependencies are populated here (dev build) and compiled
@@ -48,6 +47,7 @@ limitations under the License.
 
   <kd-login layout="column" layout-fill ng-if="$ctrl.isLoginState()">
   </kd-login>
+
   <kd-chrome layout="column" layout-fill ng-if="!$ctrl.isLoginState()">
     <!-- Application content is inserted here. -->
   </kd-chrome>
