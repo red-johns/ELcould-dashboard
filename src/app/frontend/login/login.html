@@ -14,66 +14,38 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-
-
 <!-- <kd-warnings warnings="$ctrl.errors" class="kd-login-error"></kd-warnings>
 
  -->
 <section class="kd-login-card">
-    fdsafs
+    <div class="login-title">
+        <img src="../../assets/images/logo.png" alt="">
+        <h1>ELcould</h1>
+    </div>
+    <section class="login-panel">
+        <div class="login-container">
+            <h2>登录账户</h2>
+            <form class="form-control">
+                <div class="input-group">
+                    <i class="icon-login icon-login-name"></i>
+                    <input type="text" placeholder="请输入账户名称">
+                </div>
+                <div class="input-group">
+                    <i class="icon-login icon-login-pwd"></i>
+                    <input type="password" placeholder="请输入账密码">
+                </div>
+                <div class="login-remember clearFix">
+                    <label class="remember-id">
+                        <i class="icon-login icon-login-checkbox" ng-click="$ctrl.checked()" id="checkbox"></i>
+                        <span class="remember-txt" ng-click="$ctrl.checked()">记住密码</span>
+                    </label>
+                    <a class="forget-pwd" href="forgetPassword" title="忘记密码？">忘记密码</a>
+                </div>
+                <button type="button" class="btn-login" ng-click="$ctrl.skip()">立即登录</button>
+                <div class="login-mode">
+                    <span class="login-mode-info">没有账户,<a href="forgetPassword" title="立即注册">立即注册</a></span>
+                </div>
+            </form>
+        </div>
+    </section>
 </section>
-
-<!-- <kd-title>
-        [[ELcould Dashboard|Title shown on login page on login card]]
-    </kd-title> -->
-<!-- <kd-content>
-        <md-input-container class="md-block">
-            <label>[[用户名|'Username' field label shown on login page for basic auth]]</label>
-            <input required md-no-asterisk>
-        </md-input-container>
-
-        <md-input-container class="md-block">
-            <label>[[密码|'Password' field label shown on login page for basic auth]]</label>
-            <input type="password" required md-no-asterisk>
-        </md-input-container>
-
-        <md-button class="md-raised md-primary" style="width:100%" type="button" ng-click="$ctrl.skip()">
-            [[登 录|Text shown on the sign in button on login page]]
-        </md-button>
-    </kd-content> -->
-
-<!-- <form name="$ctrl.form"
-      ng-submit="$ctrl.login()"
-      novalidate>
-  <kd-content-card class="kd-login-card">
-    <kd-title>
-      [[Kubernetes Dashboard|Title shown on login page on login card]]
-    </kd-title>
-    <kd-content>
-      <kd-login-options on-change="$ctrl.onOptionChange()">
-        <kd-token-login ng-if="$ctrl.isAuthenticationModeEnabled($ctrl.supportedAuthenticationModes.TOKEN)"
-                        title="[[Token|Token option label shown on login page]]"
-                        desc="[[Every Service Account has a Secret with valid Bearer Token that can be used to log in to Dashboard. To find out more about how to configure and use Bearer Tokens, please refer to the <a href='https://kubernetes.io/docs/admin/authentication/'>Authentication</a> section.|]]"
-
-                        on-update="$ctrl.onUpdate(loginSpec)"></kd-token-login>
-        <kd-basic-login ng-if="$ctrl.isAuthenticationModeEnabled($ctrl.supportedAuthenticationModes.BASIC)"
-                        title="[[Basic|Basic option label shown on login page]]"
-                        on-update="$ctrl.onUpdate(loginSpec)"></kd-basic-login>
-        <kd-kube-config-login title="[[Kubeconfig|Kubeconfig option label shown on login page]]"
-                              desc="[[Please select the kubeconfig file that you have created to configure access to the cluster. To find out more about how to configure and use kubeconfig file, please refer to the <a href='https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/'>Configure Access to Multiple Clusters</a> section.|]]"
-
-                              on-update="$ctrl.onUpdate(loginSpec)"></kd-kube-config-login>
-      </kd-login-options>
-
-      <md-button class="md-raised md-primary"
-                 type="submit">
-        [[Sign in|Text shown on the sign in button on login page]]
-      </md-button>
-      <md-button class="md-primary"
-                 ng-click="$ctrl.skip()"
-                 ng-if="$ctrl.isSkipButtonEnabled()">
-        [[Skip|Text shown on skip button on login page]]
-      </md-button>
-    </kd-content>
-  </kd-content-card>
-</form> -->

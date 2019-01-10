@@ -168,9 +168,22 @@ class LoginController {
 
   /** @export */
   skip() {
+    document.getElementById('particles').style.display = 'none';
     this.kdAuthService_.skipLoginPage(true);
     this.kdNavService_.setVisibility(true);
     this.state_.transitionTo(overviewState);
+  }
+
+  /** @export */
+  checked() {
+    const checkbox = document.getElementById('checkbox');
+    if (checkbox.classList.contains('icon-login-checkbox')) {
+      checkbox.classList.remove('icon-login-checkbox');
+      checkbox.classList.add('icon-login-checkbox-checked');
+    } else {
+      checkbox.classList.remove('icon-login-checkbox-checked');
+      checkbox.classList.add('icon-login-checkbox');
+    }
   }
 }
 

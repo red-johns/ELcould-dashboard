@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<svg width="90" height="22" viewBox="0 0 90 22"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <svg preserveAspectRatio="xMidYMid" width="22" height="22" viewBox="-2 -2 22 22" id="checkbox" x="0" y="0"
+        xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <style>.dcls-1{fill:#fff;stroke:#bbc2cc;stroke-width:1px}</style>
+        </defs>
+        <rect width="18" height="18" rx="2" ry="2" class="dcls-1"/>
+    </svg>
+    <svg preserveAspectRatio="xMidYMid" width="22" height="22" viewBox="-2 -2 22 22" id="checkbox_active" x="22" y="0"
+        xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <style>.ecls-1{fill:#fff;stroke:#bbc2cc;stroke-width:1px}.ecls-2{fill:#78828f;fill-rule:evenodd}</style>
+        </defs>
+        <rect width="18" height="18" rx="2" ry="2" class="ecls-1"/>
+        <path d="M14.006 6.426l-6.58 6.581-1.432-1.433.332-.333L4.025 8.94l1.414-1.415 2.302 2.302 4.833-4.832 1.432 1.431z" class="ecls-2"/>
+    </svg>
+    <svg preserveAspectRatio="xMidYMid" width="18.94" height="19" viewBox="-2 -2 18.94 19" id="name" x="45" y="0"
+        xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <style>.lcls-1{fill:#575757;fill-rule:evenodd}</style>
+        </defs>
+        <path d="M14.928 15h-1.009c-.26-3.352-3.031-6-6.45-6-3.418 0-6.19 2.648-6.45 6H.01a7.487 7.487 0 0 1 5.175-6.643C3.864 7.573 2.969 6.148 2.969 4.5a4.5 4.5 0 0 1 9 0c0 1.648-.895 3.073-2.215 3.857A7.488 7.488 0 0 1 14.928 15zM10.969 4.5a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0z" class="lcls-1"/>
+    </svg>
+    <svg preserveAspectRatio="xMidYMid" width="17" height="19" viewBox="-2 -2 17 19" id="password" x="65" y="0"
+        xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <style>.mcls-1{fill:#575757;fill-rule:evenodd}</style>
+        </defs>
+        <path d="M11 15H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h.276A4.445 4.445 0 0 1 2 4.5a4.5 4.5 0 0 1 9 0c0 .529-.108 1.029-.275 1.5H11a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2zM10 4.5a3.5 3.5 0 1 0-7 0c0 .539.132 1.044.35 1.5h6.3c.218-.456.35-.961.35-1.5zM12 8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V8z" class="mcls-1"/>
+    </svg>
+</svg>

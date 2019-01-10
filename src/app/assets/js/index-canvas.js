@@ -55,11 +55,6 @@ function init() {
     container.appendChild(renderer.domElement);
 
     document.addEventListener('mousemove', onDocumentMouseMove, false);
-    // document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-    // document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-
-    //
-
     window.addEventListener('resize', onWindowResize, false);
 
 }
@@ -75,7 +70,9 @@ function onWindowResize() {
 
 function onDocumentMouseMove(event) {
     mouseX = event.clientX - windowHalfX;
-    mouseY = event.clientY - windowHalfY;
+    if (event.clientY <= 650) {
+        mouseY = event.clientY - windowHalfY;
+    }
 }
 
 function onDocumentTouchStart(event) {

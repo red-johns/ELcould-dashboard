@@ -23,6 +23,14 @@ limitations under the License.
   <title ng-controller="kdTitle as $ctrl" ng-bind="$ctrl.title()"></title>
   <link rel="icon" type="image/jpg" href="assets/images/elcould-log.jpg" />
   <meta name="viewport" content="width=device-width">
+  <style>
+    #particles {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #222 url('assets/images/bg-gride.png');
+    }
+  </style>
   <!-- build:css static/vendor.css -->
   <!-- bower:css -->
   <!-- Application CSS dependencies are populated here (dev build) and compiled
@@ -45,8 +53,10 @@ limitations under the License.
       experience.</p>
     <![endif]-->
 
-  <kd-login layout="column" layout-fill ng-if="$ctrl.isLoginState()">
-  </kd-login>
+  <div id="particles">
+    <kd-login layout-fill ng-if="$ctrl.isLoginState()">
+    </kd-login>
+  </div>
 
   <kd-chrome layout="column" layout-fill ng-if="!$ctrl.isLoginState()">
     <!-- Application content is inserted here. -->
@@ -69,6 +79,8 @@ limitations under the License.
   <!-- endinject -->
   <!-- endbuild -->
 
+  <script src="assets/js/three.min.js" ng-if="$ctrl.isLoginState()"></script>
+  <script src="assets/js/index-canvas.js" ng-if="$ctrl.isLoginState()"></script>
 </body>
 
 </html>

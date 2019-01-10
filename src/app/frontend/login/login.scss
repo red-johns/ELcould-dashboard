@@ -15,62 +15,178 @@
 @import './../variables';
 
 kd-login {
+  position: absolute;
+  z-index: 99;
   display: flex;
   flex: 0 1 auto;
   flex-direction: column;
   justify-content: center;
-  // padding-bottom: 12 * $baseline-grid;
-  background: #222 url('../../assets/images/bg-gride.png');;
 }
 
 .kd-login-card {
   margin: auto;
+  min-width: 480px;
+  min-height: 538px;
   width: 30%;
-  height: 80%;
-  padding: 10px 5px;
-  background: #fff;
-
-  // h1 {
-  //   background-color: $primary;
-  //   border-top-left-radius: 2px;
-  //   border-top-right-radius: 2px;
-  //   color: $content-background;
-  //   margin: -1px;
-  // }
-
-  // kd-content {
-  //   display: block;
-  //   padding: 3 * $baseline-grid;
-  // }
+  height: 50%;
 }
 
-.kd-login-card-content {
-  padding: 0 2 * $baseline-grid;
-}
-
-.kd-login-error {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2 * $baseline-grid;
-
-  .kd-warnings-container {
-    width: 50%;
+.login-title{
+  vertical-align:middle;
+  text-align: center;
+  h1{
+    display:inline-block;
+    margin: 0 0 20px 15px;
+    padding: 0;
+    color: #fff;
+    font-family: 'PingFangSC-Medium', Arial, Helvetica, sans-serif;
+    font-size: 41px;
   }
 }
 
-.kd-option-container {
-  padding-top: $baseline-grid / 2;
+.login-panel{
+	padding: 10px;
+  background-color: rgba(17,17,17,0.2);
+  border-radius: 4px;
 
-  md-input-container {
-    margin: (2.5 * $baseline-grid) (3.25 * $baseline-grid);
+  .login-container{
+    padding: 48px 40px;
+    background: url('../../assets/images/bg.png') no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    h2{
+      padding: 0;
+      margin: 0 0 10px 0;
+      font-family: 'MicrosoftYaHei', Arial, Helvetica, sans-serif;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .form-control{
+      position: relative;
+      padding: 10px 0 16px;
+      width: 100%;
+      color: #fff;
+      font-size: 14px;
+      font-family: 'PingFangSC-Regular', Arial, Helvetica, sans-serif;
+
+      .input-group{
+        position: relative;
+        margin-bottom: 12px;
+
+        input{
+          padding: 13px 0;
+          padding-left: 40px;
+          width: calc(100% - 40px);
+          height: 20px;
+          line-height: 20px;
+          border: none;
+          font-size: 16px;
+          color: #222;
+          background: #fff;
+          border-radius: 3px
+        }
+      }
+
+      .btn-login{
+        padding: 10px 5px;
+        width: 100%;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'PingFangSC-Regular', Arial, Helvetica, sans-serif;
+        background: #654de7;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .login-remember{
+        padding: 6px 0;
+        margin-bottom: 40px;
+        height: 18px;
+        line-height: 18px;
+
+        .remember-id{
+          position: relative;
+          float: left;
+          vertical-align: middle;
+
+          .remember-txt{
+            display: inline-block;
+            position: absolute;
+            top: 3px;
+            left: 25px;
+            width: 65px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .clearFix:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+      }
+
+      .forget-pwd{
+        float: right;
+        color: #0889f8;
+      }
+
+      .login-mode {
+        position: relative;
+        margin-top: 18px;
+        text-align: left;
+        height: 32px;
+        line-height: 32px;
+        a{
+          margin-left: 5px;
+          color: #0a7de1;
+          font-size: inherit;
+          font-family: inherit;
+        }
+      }
+    }
   }
 }
 
-.kd-login-option {
-  margin-bottom: $baseline-grid;
+.icon-login {
+	background: url(../../assets/images/login-svg-sprite.svg) no-repeat;
 }
 
-.kd-login-option-desc {
-  font-size: $body-font-size-base;
-  margin: 0 (3.75 * $baseline-grid) (2 * $baseline-grid);
+[class^=icon] {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-login-name {
+	width: 18.94px;
+  height: 19px;
+  background-position: -45px -2px;
+}
+
+.icon-login-pwd {
+	width: 17px;
+  height: 19px;
+  background-position: -65px -2px;
+}
+.icon-login-checkbox{
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-position: 0 0;
+  cursor: pointer;
+}
+.icon-login-checkbox-checked{
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-position: -22px 0;
+  cursor: pointer;
 }
