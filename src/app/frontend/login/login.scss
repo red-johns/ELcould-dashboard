@@ -14,6 +14,16 @@
 
 @import './../variables';
 
+$root-font-size: 16px;
+
+@function px2rem($px){
+  @return ($px / $root-font-size) * 1rem;
+}
+
+@function getRemaining($px){
+  @return 100% - unit($px) ;
+}
+
 kd-login {
   position: absolute;
   z-index: 99;
@@ -25,85 +35,92 @@ kd-login {
 
 .kd-login-card {
   margin: auto;
-  min-width: 480px;
+  min-width: px2rem(480px);
   min-height: 538px;
-  width: 30%;
-  height: 50%;
 }
 
 .login-title{
   vertical-align:middle;
   text-align: center;
+  img{
+    width: px2rem(86px);
+    height: px2rem(51px);
+  }
   h1{
     display:inline-block;
-    margin: 0 0 20px 15px;
+    margin: 0 0 px2rem(20px) px2rem(15px);
     padding: 0;
     color: #fff;
     font-family: 'PingFangSC-Medium', Arial, Helvetica, sans-serif;
-    font-size: 41px;
+    font-size: px2rem(41px);
   }
 }
 
 .login-panel{
 	padding: 10px;
   background-color: rgba(17,17,17,0.2);
-  border-radius: 4px;
+  border-radius: px2rem(4px);
 
   .login-container{
-    padding: 48px 40px;
+    padding: px2rem(48px) px2rem(40px);
     background: url('../../assets/images/bg.png') no-repeat;
     background-size: cover;
-    border-radius: 4px;
+    border-radius: px2rem(4px);;
+
     h2{
       padding: 0;
-      margin: 0 0 10px 0;
+      margin: 0 0 px2rem(20px) 0;
       font-family: 'MicrosoftYaHei', Arial, Helvetica, sans-serif;
-      font-size: 24px;
+      font-size: px2rem(24px);;
       color: #fff;
     }
 
     .form-control{
       position: relative;
-      padding: 10px 0 16px;
+      padding: px2rem(10px) 0 px2rem(16px);
       width: 100%;
       color: #fff;
-      font-size: 14px;
+      font-size: px2rem(14px);
       font-family: 'PingFangSC-Regular', Arial, Helvetica, sans-serif;
 
       .input-group{
         position: relative;
-        margin-bottom: 12px;
+        margin-bottom: px2rem(12px);
 
         input{
-          padding: 13px 0;
+          padding: px2rem(13px) 0;
           padding-left: 40px;
           width: calc(100% - 40px);
-          height: 20px;
-          line-height: 20px;
+          height: px2rem(20px);
+          line-height: px2rem(20px);
           border: none;
-          font-size: 16px;
+          font-size: px2rem(16px);
           color: #222;
           background: #fff;
-          border-radius: 3px
+          border-radius: px2rem(3px);
+          font-family: 'MicrosoftYaHei', Arial, Helvetica, sans-serif;
         }
       }
 
       .btn-login{
-        padding: 10px 5px;
+        padding: px2rem(10px) px2rem(5px);
         width: 100%;
         color: #fff;
-        font-size: 20px;
+        font-size: px2rem(20px);
         font-family: 'PingFangSC-Regular', Arial, Helvetica, sans-serif;
-        background: #654de7;
+        background: #3d59f7;
         border: none;
-        border-radius: 5px;
+        border-radius: px2rem(5px);
+        &:hover{
+          background:#206af1;
+        }
       }
 
       .login-remember{
-        padding: 6px 0;
-        margin-bottom: 40px;
-        height: 18px;
-        line-height: 18px;
+        padding: px2rem(6px) 0;
+        margin-bottom: px2rem(40px);
+        height: px2rem(18px);
+        line-height: px2rem(18px);
 
         .remember-id{
           position: relative;
@@ -113,9 +130,9 @@ kd-login {
           .remember-txt{
             display: inline-block;
             position: absolute;
-            top: 3px;
-            left: 25px;
-            width: 65px;
+            top: px2rem(3px);
+            left: px2rem(25px);
+            width: px2rem(65px);
             cursor: pointer;
           }
         }
@@ -136,12 +153,13 @@ kd-login {
 
       .login-mode {
         position: relative;
-        margin-top: 18px;
+        margin-top: px2rem(18px);
         text-align: left;
-        height: 32px;
-        line-height: 32px;
+        height: px2rem(32px);
+        line-height: px2rem(32px);
+
         a{
-          margin-left: 5px;
+          margin-left: px2rem(5px);
           color: #0a7de1;
           font-size: inherit;
           font-family: inherit;
@@ -157,8 +175,8 @@ kd-login {
 
 [class^=icon] {
   position: absolute;
-  top: 14px;
-  left: 10px;
+  top: px2rem(14px);
+  left: px2rem(10px);
   display: inline-block;
   vertical-align: middle;
 }

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// eslint-disable-next-line object-curly-spacing
 import { stateName as overviewState } from '../overview/state';
 import LoginSpec from './spec';
 
@@ -69,6 +70,18 @@ class LoginController {
     this.skipButtonEnabledResource_ = kdSkipButtonEnabled;
     /** @private {boolean} */
     this.skipButtonEnabled_;
+
+
+    /** @export {string} */
+    this.username = '';
+    /** @export {string} */
+    this.password = '';
+
+    /** @export {Object} */
+    this.btnLogin = {
+      opacity: 0.6,
+      disabled: true,
+    };
   }
 
   /** @export */
@@ -156,7 +169,6 @@ class LoginController {
             this.errors = errors;
             return;
           }
-
           this.kdNavService_.setVisibility(true);
           this.state_.transitionTo(overviewState);
         })
@@ -172,6 +184,30 @@ class LoginController {
     this.kdAuthService_.skipLoginPage(true);
     this.kdNavService_.setVisibility(true);
     this.state_.transitionTo(overviewState);
+  }
+
+  /** @export */
+  onUserNameUpdate() {
+    this.updateBtnLogin();
+  }
+
+  /** @export */
+  onPasswordUpdate() {
+    this.updateBtnLogin();
+  }
+
+  updateBtnLogin() {
+    if (this.password !== '' && this.username !== '') {
+      this.btnLogin = {
+        opacity: 1,
+        disabled: false,
+      };
+    } else {
+      this.btnLogin = {
+        opacity: 0.6,
+        disabled: true,
+      };
+    }
   }
 
   /** @export */

@@ -20,7 +20,7 @@ limitations under the License.
 <section class="kd-login-card">
     <div class="login-title">
         <img src="../../assets/images/logo.png" alt="">
-        <h1>ELcould</h1>
+        <h1>ELcloud</h1>
     </div>
     <section class="login-panel">
         <div class="login-container">
@@ -28,11 +28,13 @@ limitations under the License.
             <form class="form-control">
                 <div class="input-group">
                     <i class="icon-login icon-login-name"></i>
-                    <input type="text" placeholder="请输入账户名称">
+                    <input type="text" placeholder="请输入账户名称" ng-model="$ctrl.username" ng-change="$ctrl.onUserNameUpdate()"
+                        required md-no-asterisk>
                 </div>
                 <div class="input-group">
                     <i class="icon-login icon-login-pwd"></i>
-                    <input type="password" placeholder="请输入账密码">
+                    <input type="password" placeholder="请输入账密码" ng-model="$ctrl.password" ng-change="$ctrl.onPasswordUpdate()"
+                        required md-no-asterisk>
                 </div>
                 <div class="login-remember clearFix">
                     <label class="remember-id">
@@ -41,7 +43,8 @@ limitations under the License.
                     </label>
                     <a class="forget-pwd" href="forgetPassword" title="忘记密码？">忘记密码</a>
                 </div>
-                <button type="button" class="btn-login" ng-click="$ctrl.skip()">立即登录</button>
+                <button type="button" class="btn-login" ng-click="$ctrl.skip()" ng-disabled="$ctrl.btnLogin.disabled"
+                    ng-style='{opacity: $ctrl.btnLogin.opacity}'>立即登录</button>
                 <div class="login-mode">
                     <span class="login-mode-info">没有账户,<a href="forgetPassword" title="立即注册">立即注册</a></span>
                 </div>
