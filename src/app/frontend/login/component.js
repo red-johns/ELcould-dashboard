@@ -197,7 +197,7 @@ class LoginController {
   }
 
   updateBtnLogin() {
-    if (this.password !== '' && this.username !== '') {
+    if (this.password && this.username) {
       this.btnLogin = {
         opacity: 1,
         disabled: false,
