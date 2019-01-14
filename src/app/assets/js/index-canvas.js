@@ -1,5 +1,6 @@
 
 (function (window, document) {
+
   'use strict';
 
   var html = document.documentElement || document.querySelector('html');
